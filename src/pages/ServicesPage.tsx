@@ -1,0 +1,143 @@
+import { motion } from 'motion/react';
+import { ArrowRight, Building2, Landmark, Globe2, ShieldCheck, Lightbulb, Rocket, Scale, FileText } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import CTA from '../components/CTA';
+
+const detailedServices = [
+  {
+    id: 'company-formation',
+    icon: <Building2 className="w-8 h-8" />,
+    title: 'Corporate Structuring & Company Formation',
+    description: 'The UAE stands as a premier global business hub due to its strategic position and pro-business environment. With rapidly advancing infrastructure and favorable administrative conditions, establishing your company in the UAE has never been more efficient. At NetaNexus, we guide you through this streamlined process, offering tailored insights to help you select the ideal jurisdiction and license type that perfectly aligns with your strategic goals.',
+    options: ['UAE Mainland', 'UAE Free Zone', 'Offshore Setup'],
+    image: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=2070&auto=format&fit=crop',
+  },
+  {
+    id: 'corporate-banking',
+    icon: <Landmark className="w-8 h-8" />,
+    title: 'Corporate Banking & Financial Setup',
+    description: 'The progressive and strictly regulated banking systems in the United Arab Emirates are instrumental in driving economic stability and financial security. The UAE banking sector is renowned for its steadfast commitment to top-tier service, strict compliance, and cutting-edge financial technology. With NetaNexus, you will receive comprehensive advisory in establishing your corporate and personal bank accounts, meticulously tailored to complement your operational requirements.',
+    options: ['Business Bank Account', 'Private Wealth Accounts', 'Multi-currency Solutions'],
+    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop',
+  },
+  {
+    id: 'legal-advisory',
+    icon: <ShieldCheck className="w-8 h-8" />,
+    title: 'Legal Advisory & Risk Management',
+    description: 'Operating in today\'s dynamic economic environment requires businesses to navigate rigorous regulatory landscapes and novel corporate challenges. We specialize in providing premier legal advisory and risk management services tailored to the nuanced and evolving laws in the UAE. Our expertise ensures that your operations remain compliant, secure, and strategically positioned for scale without unnecessary exposure.',
+    options: ['Commercial Contracts', 'Compliance Frameworks', 'Dispute Resolution Advisory'],
+    image: 'https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&w=2070&auto=format&fit=crop',
+  },
+  {
+    id: 'visa-services',
+    icon: <Globe2 className="w-8 h-8" />,
+    title: 'Global Mobility & Visa Solutions',
+    description: 'Seamless cross-border mobility is paramount for global investors and corporate workforce management. Dubai has pioneered exclusive, investment-focused visa programs that empower entrepreneurs to build a secure future while legitimately residing in the UAE. NetaNexus provides end-to-end visa facilitation, aligning precisely with your enterprise\'s workforce expansion and personal residency objectives.',
+    options: ['Golden Visa', 'Green Visa', 'Investor Residency', 'Corporate Employment Visas'],
+    redirect: '/visas',
+    image: 'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=2070&auto=format&fit=crop',
+  },
+  {
+    id: 'business-advisory',
+    icon: <Lightbulb className="w-8 h-8" />,
+    title: 'Strategic Business Advisory',
+    description: 'NetaNexus extends expert strategic advisory to propel your enterprise past its growth plateaus. We offer comprehensive management consulting that ranges from temporary market-entry strategies to fully fleshed-out organizational transformation plans. Our seasoned partners provide you with the operational clarity and data-driven insights necessary to secure your competitive advantage.',
+    options: ['Market Entry Playbooks', 'Operational Optimization', 'Mergers & Acquisitions'],
+    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop',
+  },
+  {
+    id: 'accounting-pro',
+    icon: <FileText className="w-8 h-8" />,
+    title: 'Accounting, Bookkeeping & PRO Services',
+    description: 'We specialize in sophisticated financial record-keeping and corporate governance, ensuring that your financials are accurate and compliant with local tax authorities. Moreover, our dedicated PRO team expedites all government liaisons, document clearing, and administrative approvals, so your executive team can focus entirely on core business growth rather than bureaucratic procedures.',
+    options: ['Corporate Tax Compliance', 'Bookkeeping Solutions', 'Government Liaison (PRO)'],
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2070&auto=format&fit=crop',
+  }
+];
+
+export default function ServicesPage() {
+  return (
+    <main className="pt-32 relative overflow-hidden">
+      {/* Background Glows */}
+      <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-uae-blue/10 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute top-40 right-1/4 w-[400px] h-[400px] bg-uae-green/5 rounded-full blur-[80px] pointer-events-none" />
+
+      <div className="container mx-auto px-6 md:px-12 mb-20 relative z-10">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="max-w-4xl"
+        >
+          <h1 className="text-5xl md:text-7xl font-display font-bold tracking-tight leading-tight mb-6 text-gradient">
+            Our Services
+          </h1>
+          <p className="text-lg text-muted font-light leading-relaxed">
+            NetaNexus provides full-spectrum solutions customized for global entrepreneurs, investors, and leading enterprises eager to secure their competitive edge in the United Arab Emirates.
+          </p>
+        </motion.div>
+      </div>
+      
+      <section className="pb-32 container mx-auto px-6 md:px-12 relative z-10">
+        <div className="flex flex-col gap-12 md:gap-24">
+          {detailedServices.map((service, idx) => (
+             <motion.div 
+               key={service.id}
+               initial={{ opacity: 0, y: 30 }}
+               whileInView={{ opacity: 1, y: 0 }}
+               viewport={{ once: true, margin: "-100px" }}
+               transition={{ duration: 0.6 }}
+               className={`flex flex-col ${idx % 2 !== 0 ? 'md:flex-row-reverse' : 'md:flex-row'} gap-8 md:gap-16 items-center p-8 md:p-12 glass rounded-3xl border border-border group`}
+             >
+                <div className="flex-1 space-y-6">
+                  <div className="w-16 h-16 rounded-xl bg-card-bg border border-border flex items-center justify-center text-accent shadow-[0_0_30px_rgba(212,175,55,0.1)] group-hover:scale-105 transition-transform duration-500">
+                    {service.icon}
+                  </div>
+                  <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground">
+                    {service.title}
+                  </h2>
+                  <p className="text-lg text-muted font-light leading-relaxed">
+                    {service.description}
+                  </p>
+                  
+                  <div className="flex flex-wrap gap-3 pt-4">
+                    {service.options.map(opt => (
+                      <span key={opt} className="px-4 py-2 rounded-full border border-border bg-background/50 text-sm font-medium text-foreground">
+                        {opt}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div className="pt-6">
+                    {service.redirect ? (
+                      <Link to={service.redirect} className="btn border border-border bg-card-bg hover:border-accent text-foreground transition-all group-hover:shadow-[0_0_20px_rgba(212,175,55,0.15)] inline-flex gap-2">
+                        Explore Visa Services <ArrowRight className="w-4 h-4" />
+                      </Link>
+                    ) : (
+                      <Link to="/contact" className="btn btn-primary inline-flex gap-2">
+                        Schedule a Consultation <ArrowRight className="w-4 h-4 text-black" />
+                      </Link>
+                    )}
+                  </div>
+                </div>
+                
+                {/* Visual Placeholder representing the service */}
+                <div className="flex-1 w-full relative">
+                  <div className="aspect-[4/3] rounded-2xl bg-card-bg border border-border overflow-hidden relative group-hover:border-accent/40 transition-colors duration-500">
+                     <div className="absolute inset-0 bg-gradient-to-br from-uae-blue/20 to-uae-green/20 mix-blend-overlay z-10" />
+                     <img 
+                       src={service.image}
+                       alt={service.title}
+                       className="w-full h-full object-cover grayscale opacity-40 group-hover:opacity-70 group-hover:scale-105 transition-all duration-700" 
+                     />
+                  </div>
+                </div>
+             </motion.div>
+          ))}
+        </div>
+      </section>
+
+      <CTA />
+    </main>
+  );
+}
