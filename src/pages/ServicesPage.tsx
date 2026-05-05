@@ -8,7 +8,7 @@ const detailedServices = [
     id: 'company-formation',
     icon: <Building2 className="w-8 h-8" />,
     title: 'Corporate Structuring & Company Formation',
-    description: 'Malaysia stands as a premier global business hub due to its strategic position in ASEAN and pro-business environment. With rapidly advancing infrastructure and favorable administrative conditions, establishing your company in Malaysia has never been more efficient. At NetaNexus, we guide you through this streamlined process, offering tailored insights to help you select the ideal jurisdiction and license type, from Sendirian Berhad (Sdn Bhd) to Labuan offshore entities.',
+    description: 'Malaysia stands as a premier global business hub due to its strategic position in ASEAN and pro business environment. With rapidly advancing infrastructure and favorable administrative conditions, establishing your company in Malaysia has never been more efficient. At NetaNexus, we guide you through this streamlined process, offering tailored insights to help you select the ideal jurisdiction and license type, from Sendirian Berhad (Sdn Bhd) to Labuan offshore entities.',
     options: ['Mainland Sdn Bhd', 'Labuan IBFC', 'Free Industrial Zones (FIZ)'],
     image: 'https://images.unsplash.com/photo-1549488344-c76b9ce6023d?q=80&w=2070&auto=format&fit=crop',
   },
@@ -16,7 +16,7 @@ const detailedServices = [
     id: 'corporate-banking',
     icon: <Landmark className="w-8 h-8" />,
     title: 'Corporate Banking & Financial Setup',
-    description: 'The progressive and strictly regulated banking systems in Malaysia are instrumental in driving economic stability and financial security. The Malaysian banking sector is renowned for its steadfast commitment to top-tier service, strict compliance, and cutting-edge financial technology. With NetaNexus, you will receive comprehensive advisory in establishing your corporate and personal bank accounts with leading institutions like Maybank, CIMB, and RHB.',
+    description: 'The progressive and strictly regulated banking systems in Malaysia are instrumental in driving economic stability and financial security. The Malaysian banking sector is renowned for its steadfast commitment to top tier service, strict compliance, and cutting edge financial technology. With NetaNexus, you will receive comprehensive advisory in establishing your corporate and personal bank accounts with leading institutions like Maybank, CIMB, and RHB.',
     options: ['Business Bank Account', 'Wealth Management', 'Multi-currency Solutions'],
     image: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?q=80&w=2070&auto=format&fit=crop',
   },
@@ -32,7 +32,7 @@ const detailedServices = [
     id: 'visa-services',
     icon: <Globe2 className="w-8 h-8" />,
     title: 'Global Mobility & Residency Solutions',
-    description: 'Seamless cross-border mobility is paramount for global investors and corporate workforce management. Malaysia has pioneered exclusive residency programs like MM2H and Premium Wealth Pass that empower entrepreneurs to build a secure future. NetaNexus provides end-to-end visa facilitation, aligning precisely with your enterprise\'s workforce expansion and personal residency objectives.',
+    description: 'Seamless cross border mobility is paramount for global investors and corporate workforce management. Malaysia has pioneered exclusive residency programs like MM2H and Premium Wealth Pass that empower entrepreneurs to build a secure future. NetaNexus provides end to end visa facilitation, aligning precisely with your enterprise\'s workforce expansion and personal residency objectives.',
     options: ['MM2H Program', 'PVIP (Premium Pass)', 'Employment Pass (DP10/ESD)'],
     redirect: '/visas',
     image: 'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=2070&auto=format&fit=crop',
@@ -41,7 +41,7 @@ const detailedServices = [
     id: 'business-advisory',
     icon: <Lightbulb className="w-8 h-8" />,
     title: 'Strategic Market Entry Advisory',
-    description: 'NetaNexus extends expert strategic advisory to propel your enterprise past its growth plateaus in the ASEAN region. We offer comprehensive management consulting that ranges from temporary market-entry strategies to fully fleshed-out organizational transformation plans. Our seasoned partners provide you with the operational clarity and data-driven insights necessary to secure your competitive advantage in Malaysia.',
+    description: 'NetaNexus extends expert strategic advisory to propel your enterprise past its growth plateaus in the ASEAN region. We offer comprehensive management consulting that ranges from temporary market entry strategies to fully fleshed out organizational transformation plans. Our seasoned partners provide you with the operational clarity and data driven insights necessary to secure your competitive advantage in Malaysia.',
     options: ['Market Entry Playbooks', 'Supply Chain Advisory', 'ASEAN Expansion Strategy'],
     image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop',
   },
@@ -49,7 +49,7 @@ const detailedServices = [
     id: 'accounting-pro',
     icon: <FileText className="w-8 h-8" />,
     title: 'Accounting, Bookkeeping & Corporate Secretary',
-    description: 'We specialize in sophisticated financial record-keeping and corporate governance, ensuring that your financials are accurate and compliant with the Inland Revenue Board (LHDN). Moreover, our dedicated Corporate Secretarial team expedites all government liaisons and administrative approvals, so your executive team can focus entirely on core business growth.',
+    description: 'We specialize in sophisticated financial record keeping and corporate governance, ensuring that your financials are accurate and compliant with the Inland Revenue Board (LHDN). Moreover, our dedicated Corporate Secretarial team expedites all government liaisons and administrative approvals, so your executive team can focus entirely on core business growth.',
     options: ['LHDN Tax Compliance', 'Corporate Secretarial', 'Treasury Services'],
     image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2070&auto=format&fit=crop',
   }
@@ -73,7 +73,7 @@ export default function ServicesPage() {
             Our Services
           </h1>
           <p className="text-lg text-muted font-light leading-relaxed">
-            NetaNexus provides full-spectrum solutions customized for global entrepreneurs, investors, and leading enterprises eager to secure their competitive edge in Malaysia and the wider ASEAN region.
+            NetaNexus provides full spectrum solutions customized for global entrepreneurs, investors, and leading enterprises eager to secure their competitive edge in Malaysia and the wider ASEAN region.
           </p>
         </motion.div>
       </div>

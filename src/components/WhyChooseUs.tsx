@@ -2,7 +2,7 @@ import { motion } from 'motion/react';
 import { CheckCircle2 } from 'lucide-react';
 
 const reasons = [
-  'Unbiased, data-driven recommendations.',
+  'Unbiased, data driven recommendations.',
   'Senior partners involved in every engagement.',
   'Agile methodologies for rapid implementation.',
   'Global network of industry specialists.',

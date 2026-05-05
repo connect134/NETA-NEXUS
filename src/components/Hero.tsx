@@ -56,7 +56,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
           className="text-lg text-muted max-w-[600px] mb-10 leading-[1.6]"
         >
-          Join Malaysia's rapid economic growth. NetaNexus is your all-in-one hub for seamless setup, residency, and strategic expansion in a land of infinite opportunity.
+          Join Malaysia's rapid economic growth. NetaNexus is your all in one hub for seamless setup, residency, and strategic expansion in a land of infinite opportunity.
         </motion.p>
 
         <motion.div

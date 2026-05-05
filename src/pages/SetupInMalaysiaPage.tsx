@@ -6,12 +6,12 @@ const reasons = [
   {
     icon: <Briefcase className="w-8 h-8" />,
     title: 'Strategic Gateway',
-    description: 'Located at the heart of ASEAN, Malaysia offers a prime gateway to a market of 600 million people, supported by world-class logistics and connectivity.'
+    description: 'Located at the heart of ASEAN, Malaysia offers a prime gateway to a market of 600 million people, supported by world class logistics and connectivity.'
   },
   {
     icon: <TrendingUp className="w-8 h-8" />,
     title: 'Competitive Costs',
-    description: 'Benefit from competitive operational costs and a business-friendly tax regime, including attractive incentives for Pioneer Status and Investment Tax Allowance.'
+    description: 'Benefit from competitive operational costs and a business friendly tax regime, including attractive incentives for Pioneer Status and Investment Tax Allowance.'
   },
   {
     icon: <Globe2 className="w-8 h-8" />,

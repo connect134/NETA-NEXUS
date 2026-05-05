@@ -62,10 +62,10 @@ export default function About() {
             className="flex flex-col gap-8 text-lg text-muted font-light leading-relaxed"
           >
             <p>
-              At NetaNexus, we believe that true transformation requires more than just high-level strategy—it demands deep operational expertise, unwavering commitment, and a nuanced understanding of global market dynamics.
+              At NetaNexus, we believe that true transformation requires more than high level strategy. It demands deep operational expertise, disciplined execution, and a nuanced understanding of global market dynamics.
             </p>
             <p>
-              Founded by industry veterans, our firm partners with forward-thinking leaders to solve their most critical challenges. From digital acceleration to organizational restructuring, we provide bespoke solutions that drive sustainable, long-term value.
+              We partner with leaders at pivotal moments to address their most critical challenges. From digital acceleration to organizational restructuring, we deliver tailored solutions that create measurable impact and enduring value.
             </p>
             <div className="pt-8 border-t border-border mt-4">
               <Link to="/about" className="inline-flex items-center gap-2 text-foreground font-medium hover:text-accent transition-colors group">

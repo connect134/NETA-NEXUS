@@ -11,7 +11,7 @@ const services = [
       'Mainland, Free Zone & Offshore setup',
       'Business licensing & registration',
       'Legal structuring strategy',
-      'End-to-end company formation'
+      'End to end company formation'
     ]
   },
   {
@@ -20,7 +20,7 @@ const services = [
     description: 'Seamless banking solutions tailored for global entrepreneurs and businesses.',
     includes: [
       'Business bank account setup',
-      'Multi-currency account solutions',
+      'Multi currency account solutions',
       'Compliance & KYC assistance',
       'Financial structuring guidance'
     ]
@@ -50,7 +50,7 @@ const services = [
   {
     icon: <Lightbulb className="w-6 h-6" />,
     title: 'Strategic Business Advisory',
-    description: 'Data-driven insights and expert guidance to scale, optimize, and future-proof your business.',
+    description: 'Data driven insights and expert guidance to scale, optimize, and future proof your business.',
     includes: [
       'Market entry strategy',
       'Business growth consulting',
@@ -65,7 +65,7 @@ const services = [
     includes: [
       'Malaysia & international expansion planning',
       'Competitor & market analysis',
-      'Go-to-market strategy'
+      'Go to market strategy'
     ]
   },
   {

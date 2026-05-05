@@ -8,7 +8,7 @@ export default function Footer() {
           
           <div className="lg:col-span-1">
             <Link to="/" className="flex items-center mb-8 group">
-              <img src="/images/logo.svg" alt="Neta Nexus Group" className="h-10 md:h-12 transition-opacity duration-300 group-hover:opacity-80" />
+              <img src="/images/logo.svg" alt="Neta Nexus Group" className="h-14 md:h-16 transition-opacity duration-300 group-hover:opacity-80" />
             </Link>
             <p className="text-muted font-light text-sm leading-relaxed max-w-xs mb-6">
               A premier consultancy firm dedicated to guiding enterprises through complex transformations and driving sustainable growth in Malaysia.

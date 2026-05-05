@@ -6,12 +6,12 @@ const benefits = [
   {
     icon: <Handshake className="w-8 h-8" />,
     title: 'Exalted Partnership',
-    description: 'We treat our referrers as strategic partners. Your reputation is safe with us as we provide top-tier service to your contacts.'
+    description: 'We treat our referrers as strategic partners. Your reputation is safe with us as we provide top tier service to your contacts.'
   },
   {
     icon: <Gift className="w-8 h-8" />,
     title: 'Bespoke Rewards',
-    description: 'While we customize every reward structure, we ensure our partners are well-recognized for the value they bring to the NetaNexus ecosystem.'
+    description: 'While we customize every reward structure, we ensure our partners are well recognized for the value they bring to the NetaNexus ecosystem.'
   },
   {
     icon: <TrendingUp className="w-8 h-8" />,
@@ -82,7 +82,7 @@ export default function ReferralProgramPage() {
             <div className="absolute -top-10 -left-10 w-40 h-40 bg-accent/10 rounded-full blur-3xl" />
             <h2 className="text-3xl md:text-5xl font-display font-bold mb-6 text-foreground">How it Works</h2>
             <p className="text-muted mb-10 leading-relaxed">
-              Our reward structure is currently being finalized to provide the best possible value to our partners. We focus on transparency, high-value incentives, and long-term collaboration.
+              Our reward structure is currently being finalized to provide the best possible value to our partners. We focus on transparency, high value incentives, and long term collaboration.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="mailto:referrals@netanexus.com" className="btn btn-primary">

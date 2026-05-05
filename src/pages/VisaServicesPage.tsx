@@ -8,12 +8,12 @@ const visaTypes = [
     id: 'mm2h',
     icon: <Globe2 className="w-8 h-8" />,
     title: 'Malaysia My Second Home (MM2H)',
-    description: 'The MM2H program is a long-term residency initiative for foreigners who wish to live in Malaysia. With tiers tailored to different financial profiles, it offers a secure residency solution in one of Asia\'s most vibrant economies.',
+    description: 'The MM2H program is a long term residency initiative for foreigners who wish to live in Malaysia. With tiers tailored to different financial profiles, it offers a secure residency solution in one of Asia\'s most vibrant economies.',
     benefits: [
-      'Long-term multiple-entry visa',
+      'Long term multiple entry visa',
       'Permission to purchase residential property',
-      'Tax-exempt foreign-sourced income',
-      'High-quality healthcare and education access',
+      'Tax exempt foreign sourced income',
+      'High quality healthcare and education access',
       'Sponsorship for spouse and dependents'
     ],
     image: 'https://images.unsplash.com/photo-1596422846543-75c6fc197f07?q=80&w=2070&auto=format&fit=crop'
@@ -26,7 +26,7 @@ const visaTypes = [
     benefits: [
       '2 to 5 years renewable residency',
       'Eligible for spouse and dependent passes',
-      'Fast-track processing for Tier 1 applicants',
+      'Fast track processing for Tier 1 applicants',
       'Support for MDEC Digital Economy status companies',
       'Simplified renewal and transition processes'
     ],
@@ -36,9 +36,9 @@ const visaTypes = [
     id: 'pvip',
     icon: <Award className="w-8 h-8" />,
     title: 'Premium Wealth Pass (PVIP)',
-    description: 'The PVIP is a "Residency through Investment" program for high-net-worth individuals. It offers a unique 20-year term, providing the ultimate stability for global entrepreneurs and their families in Malaysia.',
+    description: 'The PVIP is a "Residency through Investment" program for high net worth individuals. It offers a unique 20-year term, providing the ultimate stability for global entrepreneurs and their families in Malaysia.',
     benefits: [
-      '20-year multiple-entry visa duration',
+      '20 year multiple entry visa duration',
       'Permission to work and invest in Malaysia',
       'No minimum stay requirements',
       'Sponsorship for families and foreign domestic helpers',
@@ -52,8 +52,8 @@ const visaTypes = [
     title: 'DE Rantau (Digital Nomad Pass)',
     description: 'Positioning Malaysia as a preferred digital nomad hub, the DE Rantau pass is designed for remote workers and freelancers, offering a 12-month stay in stunning locations across Malaysia.',
     benefits: [
-      '12-month renewable stay',
-      'Access to certified nomad-friendly hubs',
+      '12 month renewable stay',
+      'Access to certified nomad friendly hubs',
       'Strategic locations like KL, Penang, and Langkawi',
       'Simplified online application via MDEC',
       'Permission to bring spouse and children'

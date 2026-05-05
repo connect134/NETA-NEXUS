@@ -6,19 +6,19 @@ const teamMembers = [
     id: 'ceo',
     name: 'Alexander Sterling',
     role: 'Founder & CEO',
-    description: 'With over 20 years of experience in high-growth markets, Alexander established NetaNexus to redefine premium business advisory and corporate structuring in Malaysia.',
+    description: 'With over 20 years of experience in high growth markets, Alexander established NetaNexus to redefine premium business advisory and corporate structuring in Malaysia.',
     image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=2000&auto=format&fit=crop',
   },
   {
     id: 'md',
     name: 'Elena Rostova',
     role: 'Managing Director',
-    description: 'Elena spearheads our strategic operations, ensuring our global clients receive world-class solutions for market entry and operational expansion in the ASEAN region.',
+    description: 'Elena spearheads our strategic operations, ensuring our global clients receive world class solutions for market entry and operational expansion in the ASEAN region.',
     image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=2000&auto=format&fit=crop',
   },
   {
     id: 'legal',
-    name: 'Tariq Al-Mansouri',
+    name: 'Tariq Al Mansouri',
     role: 'Director of Legal Advisory',
     description: 'Tariq is an expert in international commercial law and Malaysian compliance, safeguarding our clients\' corporate interests and securing their legal frameworks.',
     image: 'https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=2000&auto=format&fit=crop',
@@ -27,7 +27,7 @@ const teamMembers = [
     id: 'banking',
     name: 'Aisha Rahman',
     role: 'Head of Corporate Banking',
-    description: 'Aisha brings deep-rooted relationships with Malaysia\'s top financial institutions, providing seamless banking setups and wealth management for global investors.',
+    description: 'Aisha brings deep rooted relationships with Malaysia\'s top financial institutions, providing seamless banking setups and wealth management for global investors.',
     image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=2000&auto=format&fit=crop',
   },
   {
@@ -41,7 +41,7 @@ const teamMembers = [
     id: 'strategy',
     name: 'Sophia Laurent',
     role: 'Director of Strategy',
-    description: 'Sophia architects robust frameworks for global enterprises, ensuring long-term profitability and sustainable market capture across the Southeast Asian corridor.',
+    description: 'Sophia architects robust frameworks for global enterprises, ensuring long term profitability and sustainable market capture across the Southeast Asian corridor.',
     image: 'https://images.unsplash.com/photo-1598550874175-4d0ef436c909?q=80&w=2000&auto=format&fit=crop',
   }
 ];

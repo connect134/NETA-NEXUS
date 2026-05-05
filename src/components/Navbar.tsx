@@ -34,22 +34,12 @@ export default function Navbar() {
       <div className="container mx-auto px-6 md:px-12 flex items-center justify-between">
         <Link to="/" className="flex items-center group">
           <div className="relative overflow-hidden">
-             <img src="/images/logo.svg" alt="Neta Nexus Group" className="h-10 md:h-14 object-contain transition-transform duration-300 group-hover:scale-105" />
+             <img src="/images/logo.svg" alt="Neta Nexus Group" className="h-12 md:h-18 object-contain transition-transform duration-300 group-hover:scale-105" />
           </div>
-          <div className="flex items-center gap-1.5 ml-2 pl-4 border-l border-border h-6">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1425 750" className="w-6 h-4 rounded-sm shadow-sm">
-              <rect width="1425" height="750" fill="#fff"/>
-              <rect width="1425" height="53.57" fill="#c00"/>
-              <rect y="107.14" width="1425" height="53.57" fill="#c00"/>
-              <rect y="214.28" width="1425" height="53.57" fill="#c00"/>
-              <rect y="321.42" width="1425" height="53.57" fill="#c00"/>
-              <rect y="428.57" width="1425" height="53.57" fill="#c00"/>
-              <rect y="535.71" width="1425" height="53.57" fill="#c00"/>
-              <rect y="642.85" width="1425" height="53.57" fill="#c00"/>
-              <rect width="712.5" height="375" fill="#003580"/>
-              <path d="M480.8,111.4c-72.9,0-132,59.1-132,132s59.1,132,132,132c32.7,0,62.6-11.9,85.5-31.4c-16.7,9.3-36.1,14.6-56.7,14.6c-63.4,0-114.7-51.4-114.7-114.7s51.4-114.7,114.7-114.7c20.7,0,40.1,5.3,56.7,14.6C543.4,123.3,513.5,111.4,480.8,111.4z" fill="#ffcc00"/>
-              <polygon points="562.5,187.5 569.2,217.4 597.1,204.9 586.3,233.4 616.1,239.5 588.1,252.6 605.1,277.9 576.2,267.7 576.2,298.2 558.1,273.4 534.6,293.1 547.7,265.1 517.2,265.1 542.4,247.1 522.6,223.7 550.8,235.3" fill="#ffcc00" transform="translate(45,0)"/>
-            </svg>
+          <div className="flex items-center ml-2 pl-4 border-l border-border">
+            <span className="text-2xl md:text-3xl font-black tracking-tighter text-foreground whitespace-nowrap transition-all duration-500 ease-out group-hover:scale-105 group-hover:text-primary inline-block origin-left">
+              NETA NEXUS
+            </span>
           </div>
         </Link>
 
