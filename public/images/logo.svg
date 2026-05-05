@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none">
+  <defs>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#D4AF37;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#F9E271;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#B8860B;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <g transform="translate(100, 80) scale(1.2)">
+    <path d="M20,150 L20,0 L100,100 L100,0 L120,0 L120,150 L40,50 L40,150 L20,150 Z" fill="url(#gold)" />
+    <path d="M60,150 L60,0 L140,100 L140,0 L160,0 L160,150 L80,50 L80,150 L60,150 Z" fill="url(#gold)" opacity="0.8" />
+  </g>
+  <text x="200" y="325" font-family="Inter, sans-serif" font-size="42" font-weight="700" fill="url(#gold)" text-anchor="middle" letter-spacing="2">NETA NEXUS</text>
+  <g transform="translate(0, 10)">
+    <line x1="80" y1="355" x2="175" y2="355" stroke="url(#gold)" stroke-width="1.5" />
+    <text x="200" y="360" font-family="Inter, sans-serif" font-size="16" font-weight="500" fill="url(#gold)" text-anchor="middle" letter-spacing="8">GROUP</text>
+    <line x1="225" y1="355" x2="320" y2="355" stroke="url(#gold)" stroke-width="1.5" />
+  </g>
+</svg>

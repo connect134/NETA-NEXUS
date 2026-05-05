@@ -47,7 +47,7 @@ export default function ContactPage() {
               
               <div className="flex flex-col gap-2">
                 <label htmlFor="email" className="text-sm text-muted">Email Address</label>
-                <input type="email" id="email" className="bg-background border border-border rounded-lg px-4 py-3 text-foreground focus:outline-none focus:border-accent transition-colors" placeholder="john@example.com" />
+                <input type="email" id="email" className="bg-background border border-border rounded-lg px-4 py-3 text-foreground focus:outline-none focus:border-accent transition-colors" placeholder="your@email.com" />
               </div>
 
               <div className="flex flex-col gap-2">
@@ -95,7 +95,14 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="text-sm text-muted mb-1">Email Us</p>
-                    <a href="mailto:contact@netanexus.com" className="text-lg text-foreground hover:text-accent transition-colors">contact@netanexus.com</a>
+                    <motion.a 
+                      href="mailto:connect@netanexus.com" 
+                      className="text-lg text-foreground hover:text-accent transition-colors relative group inline-block"
+                      whileHover={{ x: 4 }}
+                    >
+                      connect@netanexus.com
+                      <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-accent transition-all duration-300 group-hover:w-full"></span>
+                    </motion.a>
                   </div>
                 </div>
                 

@@ -32,13 +32,9 @@ export default function Navbar() {
       )}
     >
       <div className="container mx-auto px-6 md:px-12 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-3">
-          <div className="relative flex items-center gap-2">
-             <img src="/logo.png" alt="Neta Nexus" className="h-8 md:h-10 object-contain" />
-             <div className="flex flex-col">
-               <span className="text-lg md:text-xl font-display font-bold tracking-tight uppercase leading-none">NETANEXUS</span>
-               <span className="text-[10px] text-accent font-medium tracking-[0.2em] uppercase leading-none mt-1">Group</span>
-             </div>
+        <Link to="/" className="flex items-center group">
+          <div className="relative overflow-hidden">
+             <img src="/images/logo.svg" alt="Neta Nexus Group" className="h-10 md:h-14 object-contain transition-transform duration-300 group-hover:scale-105" />
           </div>
           <div className="flex items-center gap-1.5 ml-2 pl-4 border-l border-border h-6">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1425 750" className="w-6 h-4 rounded-sm shadow-sm">

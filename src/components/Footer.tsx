@@ -7,9 +7,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           
           <div className="lg:col-span-1">
-            <Link to="/" className="text-xl font-display font-bold tracking-tight flex items-center gap-2 mb-6 uppercase">
-              <img src="/logo.png" alt="Neta Nexus" className="h-6" />
-              NETANEXUS
+            <Link to="/" className="flex items-center mb-8 group">
+              <img src="/images/logo.svg" alt="Neta Nexus Group" className="h-10 md:h-12 transition-opacity duration-300 group-hover:opacity-80" />
             </Link>
             <p className="text-muted font-light text-sm leading-relaxed max-w-xs mb-6">
               A premier consultancy firm dedicated to guiding enterprises through complex transformations and driving sustainable growth in Malaysia.
