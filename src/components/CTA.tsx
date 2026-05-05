@@ -6,7 +6,7 @@ export default function CTA() {
   return (
     <section id="contact" className="py-32 relative overflow-hidden">
       {/* Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-uae-blue/5 to-uae-green/10 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-glow-2/5 to-glow-1/10 pointer-events-none" />
       
       <div className="container mx-auto px-6 md:px-12 relative z-10">
         <motion.div 
@@ -18,8 +18,8 @@ export default function CTA() {
         >
           {/* Inner Glow */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-accent/15 rounded-full blur-[80px] pointer-events-none" />
-          <div className="absolute top-0 right-0 w-[200px] h-[200px] bg-uae-green/10 rounded-full blur-[60px] pointer-events-none" />
-          <div className="absolute bottom-0 left-0 w-[200px] h-[200px] bg-uae-blue/10 rounded-full blur-[60px] pointer-events-none" />
+          <div className="absolute top-0 right-0 w-[200px] h-[200px] bg-glow-1/10 rounded-full blur-[60px] pointer-events-none" />
+          <div className="absolute bottom-0 left-0 w-[200px] h-[200px] bg-glow-2/10 rounded-full blur-[60px] pointer-events-none" />
 
           <h2 className="text-4xl md:text-6xl font-display font-bold tracking-tight leading-tight mb-6 relative z-10 text-gradient">
             Ready to redefine your <br className="hidden md:block" />

@@ -19,7 +19,7 @@ export default function ContactPage() {
             Contact Us
           </h1>
           <p className="text-lg text-muted font-light leading-relaxed">
-            Get in touch with our experts for a personalized consultation. We are here to help you navigate your business journey in the UAE.
+            Get in touch with our experts for a personalized consultation. We are here to help you navigate your business journey in Malaysia and the ASEAN region.
           </p>
         </motion.div>
 
@@ -31,7 +31,7 @@ export default function ContactPage() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="glass p-8 md:p-12 rounded-3xl border border-border relative overflow-hidden"
           >
-            <div className="absolute top-0 right-0 w-64 h-64 bg-uae-green/5 rounded-full blur-[50px] pointer-events-none" />
+            <div className="absolute top-0 right-0 w-64 h-64 bg-glow-1/5 rounded-full blur-[50px] pointer-events-none" />
             <h3 className="text-2xl font-display font-semibold mb-8 text-foreground relative z-10">Quick Call Request</h3>
             <form className="flex flex-col gap-6 relative z-10" onSubmit={(e) => e.preventDefault()}>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -51,8 +51,8 @@ export default function ContactPage() {
               </div>
 
               <div className="flex flex-col gap-2">
-                <label htmlFor="phone" className="text-sm text-muted">Phone Number</label>
-                <input type="tel" id="phone" className="bg-background border border-border rounded-lg px-4 py-3 text-foreground focus:outline-none focus:border-accent transition-colors" placeholder="+971 50 123 4567" />
+                <label htmlFor="phone" className="text-sm text-muted">Phone Number / WhatsApp</label>
+                <input type="tel" id="phone" className="bg-background border border-border rounded-lg px-4 py-3 text-foreground focus:outline-none focus:border-accent transition-colors" placeholder="+60 12 408 1286" />
               </div>
 
               <div className="flex flex-col gap-2">
@@ -63,6 +63,7 @@ export default function ContactPage() {
                   <option value="banking">Corporate Banking</option>
                   <option value="visas">Visas & Immigration</option>
                   <option value="advisory">Strategic Advisory</option>
+                  <option value="referral">Referral Program</option>
                   <option value="other">Other</option>
                 </select>
               </div>
@@ -99,12 +100,12 @@ export default function ContactPage() {
                 </div>
                 
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-full bg-card-bg border border-border flex items-center justify-center text-accent shrink-0">
-                    <Phone className="w-5 h-5" />
+                  <div className="w-12 h-12 rounded-full bg-card-bg border border-border flex items-center justify-center text-accent shrink-0 text-[#25D366]">
+                    <svg viewBox="0 0 24 24" className="w-6 h-6 fill-current" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
                   </div>
                   <div>
-                    <p className="text-sm text-muted mb-1">Call Us</p>
-                    <a href="tel:+97141234567" className="text-lg text-foreground hover:text-accent transition-colors">+971 4 123 4567</a>
+                    <p className="text-sm text-muted mb-1">WhatsApp Us</p>
+                    <a href="https://wa.me/60124081286" target="_blank" rel="noopener noreferrer" className="text-lg text-foreground hover:text-accent transition-colors">+60 12 408 1286</a>
                   </div>
                 </div>
 
@@ -115,9 +116,10 @@ export default function ContactPage() {
                   <div>
                     <p className="text-sm text-muted mb-1">Visit Us</p>
                     <p className="text-lg text-foreground">
-                      Level 42, Emirates Towers<br />
-                      Sheikh Zayed Road<br />
-                      Dubai, United Arab Emirates
+                      Neta Nexus Group, Level 8,<br />
+                      Penthouse Centrepoint North Tower,<br />
+                      Lingkaran Syed Putra, Mid Valley City,<br />
+                      59200 Kuala Lumpur, Malaysia
                     </p>
                   </div>
                 </div>
@@ -126,11 +128,11 @@ export default function ContactPage() {
 
             {/* Map Placeholder */}
             <div className="flex-grow rounded-3xl overflow-hidden border border-border relative min-h-[300px] bg-card-bg flex items-center justify-center">
-               <div className="absolute inset-0 opacity-30 mix-blend-luminosity" style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=2070&auto=format&fit=crop")', backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
-               <div className="absolute inset-0 bg-gradient-to-t from-background via-uae-blue/20 to-transparent" />
+               <div className="absolute inset-0 opacity-30 mix-blend-luminosity" style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1549488344-c76b9ce6023d?q=80&w=2070&auto=format&fit=crop")', backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
+               <div className="absolute inset-0 bg-gradient-to-t from-background via-glow-2/20 to-transparent" />
                <div className="relative z-10 text-center p-6 glass rounded-2xl border border-border/50">
                  <MapPin className="w-8 h-8 text-accent mx-auto mb-3" />
-                 <p className="text-foreground font-medium">Dubai Headquarters</p>
+                 <p className="text-foreground font-medium">Kuala Lumpur Headquarters</p>
                </div>
             </div>
           </motion.div>

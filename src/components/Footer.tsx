@@ -8,12 +8,18 @@ export default function Footer() {
           
           <div className="lg:col-span-1">
             <Link to="/" className="text-xl font-display font-bold tracking-tight flex items-center gap-2 mb-6 uppercase">
-              <span className="w-6 h-6 rounded bg-accent flex items-center justify-center transform rotate-45"></span>
+              <img src="/logo.png" alt="Neta Nexus" className="h-6" />
               NETANEXUS
             </Link>
-            <p className="text-muted font-light text-sm leading-relaxed max-w-xs">
-              A premier consultancy firm dedicated to guiding enterprises through complex transformations and driving sustainable growth.
+            <p className="text-muted font-light text-sm leading-relaxed max-w-xs mb-6">
+              A premier consultancy firm dedicated to guiding enterprises through complex transformations and driving sustainable growth in Malaysia.
             </p>
+            <div className="text-xs text-muted font-light leading-relaxed">
+               Neta Nexus Group, Level 8,<br />
+               Penthouse Centrepoint North Tower,<br />
+               Lingkaran Syed Putra, Mid Valley City,<br />
+               59200 Kuala Lumpur
+            </div>
           </div>
 
           <div>
@@ -22,7 +28,7 @@ export default function Footer() {
               <li><Link to="/services" className="hover:text-accent transition-colors">Strategic Advisory</Link></li>
               <li><Link to="/services" className="hover:text-accent transition-colors">Company Formation</Link></li>
               <li><Link to="/services" className="hover:text-accent transition-colors">Corporate Banking</Link></li>
-              <li><Link to="/services" className="hover:text-accent transition-colors">Visas & Immigration</Link></li>
+              <li><Link to="/visas" className="hover:text-accent transition-colors">Residency Solutions</Link></li>
             </ul>
           </div>
 
@@ -30,7 +36,7 @@ export default function Footer() {
             <h4 className="text-foreground font-medium mb-6">Company</h4>
             <ul className="space-y-4 text-sm text-muted font-light">
               <li><Link to="/about" className="hover:text-accent transition-colors">About Us</Link></li>
-              <li><Link to="/setup-in-uae" className="hover:text-accent transition-colors">Why Consider UAE</Link></li>
+              <li><Link to="/referral" className="hover:text-accent transition-colors">Referral Program</Link></li>
               <li><Link to="/contact" className="hover:text-accent transition-colors">Contact</Link></li>
             </ul>
           </div>
@@ -38,9 +44,9 @@ export default function Footer() {
           <div>
             <h4 className="text-foreground font-medium mb-6">Connect</h4>
             <ul className="space-y-4 text-sm text-muted font-light">
-              <li><a href="#" className="hover:text-accent transition-colors">LinkedIn</a></li>
-              <li><a href="#" className="hover:text-accent transition-colors">Twitter</a></li>
-              <li><a href="#" className="hover:text-accent transition-colors">Insights & News</a></li>
+              <li><a href="https://wa.me/60124081286" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors flex items-center gap-2 text-[#25D366]">WhatsApp Us</a></li>
+              <li><a href="https://x.com/NetaNexus" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">X (Twitter)</a></li>
+              <li><a href="/about#leadership" className="hover:text-accent transition-colors">Insights & News</a></li>
             </ul>
           </div>
 

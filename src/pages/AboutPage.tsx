@@ -1,12 +1,13 @@
 import { motion } from 'motion/react';
 import About from '../components/About';
 import WhyChooseUs from '../components/WhyChooseUs';
+import Team from '../components/Team';
 
 export default function AboutPage() {
   return (
     <main className="pt-32 relative overflow-hidden">
       {/* Background Glows */}
-      <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-uae-green/10 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-glow-1/10 rounded-full blur-[100px] pointer-events-none" />
       <div className="absolute top-40 left-1/4 w-[400px] h-[400px] bg-accent/5 rounded-full blur-[80px] pointer-events-none" />
 
       <div className="container mx-auto px-6 md:px-12 mb-16 relative z-10">
@@ -20,13 +21,14 @@ export default function AboutPage() {
             About NetaNexus
           </h1>
           <p className="text-lg text-muted font-light leading-relaxed">
-            We are a premier consultancy firm dedicated to guiding enterprises through complex transformations and driving sustainable growth in the UAE and beyond.
+            We are a premier consultancy firm based in Malaysia, dedicated to guiding global enterprises through complex transformations and driving sustainable growth in Southeast Asia.
           </p>
         </motion.div>
       </div>
       
       <About />
       <WhyChooseUs />
+      <Team />
     </main>
   );
 }

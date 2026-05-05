@@ -15,7 +15,7 @@ export default function WhyChooseUs() {
     <section id="why-us" className="py-32 relative bg-card-bg overflow-hidden">
       {/* Background Elements */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent/15 rounded-full blur-[100px] pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-uae-blue/10 rounded-full blur-[80px] pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-glow-2/10 rounded-full blur-[80px] pointer-events-none" />
       
       {/* Subtle Geometric Pattern */}
       <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'radial-gradient(var(--color-accent) 1px, transparent 1px)', backgroundSize: '32px 32px' }} />
@@ -30,9 +30,10 @@ export default function WhyChooseUs() {
             transition={{ duration: 0.8 }}
           >
             <div className="aspect-square rounded-3xl overflow-hidden relative">
+              {/* Malaysian Market / Culture Representation */}
               <img 
-                src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop" 
-                alt="Modern corporate office" 
+                src="https://images.unsplash.com/photo-1596422846543-75c6fc197f07?q=80&w=2070&auto=format&fit=crop" 
+                alt="Malaysian market excellence" 
                 className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
                 referrerPolicy="no-referrer"
               />

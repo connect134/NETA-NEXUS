@@ -63,7 +63,7 @@ const services = [
     title: 'Market Entry & Expansion Strategy',
     description: 'Navigate new territories with confidence through comprehensive market analysis and planning.',
     includes: [
-      'UAE / international expansion planning',
+      'Malaysia & international expansion planning',
       'Competitor & market analysis',
       'Go-to-market strategy'
     ]

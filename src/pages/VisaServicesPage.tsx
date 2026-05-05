@@ -5,60 +5,60 @@ import CTA from '../components/CTA';
 
 const visaTypes = [
   {
-    id: 'golden-visa',
-    icon: <Award className="w-8 h-8" />,
-    title: 'UAE Golden Visa',
-    description: 'The Golden Visa is a highly sought-after long-term residency program designed to attract foreign investors, entrepreneurs, exceptional talents, and scientists to the UAE. It offers a 10-year renewable residency without the need for a national sponsor.',
-    benefits: [
-      '10-year residency duration',
-      'No national sponsor required',
-      'Sponsorship of family members including spouses and children',
-      'Ability to sponsor domestic helpers',
-      'If the primary visa holder passes away, family members can stay until their permit expires'
-    ],
-    image: 'https://images.unsplash.com/photo-1546412414-e1885259563a?q=80&w=2070&auto=format&fit=crop'
-  },
-  {
-    id: 'green-visa',
+    id: 'mm2h',
     icon: <Globe2 className="w-8 h-8" />,
-    title: 'UAE Green Visa',
-    description: 'A newly introduced 5-year residency visa aimed at skilled professionals, freelancers, and self-employed individuals. This progressive visa type separates the residency permit from company sponsorship, offering greater flexibility and stability.',
+    title: 'Malaysia My Second Home (MM2H)',
+    description: 'The MM2H program is a long-term residency initiative for foreigners who wish to live in Malaysia. With tiers tailored to different financial profiles, it offers a secure residency solution in one of Asia\'s most vibrant economies.',
     benefits: [
-      '5-year residency duration',
-      'No employer sponsorship required',
-      'Longer grace periods (up to 6 months) after visa expiry or cancellation',
-      'Simplified requirements for sponsoring family members',
-      'Ideal for freelancers and independent contractors'
+      'Long-term multiple-entry visa',
+      'Permission to purchase residential property',
+      'Tax-exempt foreign-sourced income',
+      'High-quality healthcare and education access',
+      'Sponsorship for spouse and dependents'
     ],
-    image: 'https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=2070&auto=format&fit=crop'
+    image: 'https://images.unsplash.com/photo-1596422846543-75c6fc197f07?q=80&w=2070&auto=format&fit=crop'
   },
   {
-    id: 'investor-visa',
+    id: 'employment-pass',
     icon: <Briefcase className="w-8 h-8" />,
-    title: 'Investor & Partner Visas',
-    description: 'For foreign nationals who establish an onshore or free zone company in the UAE, or acquire shares in an existing company. This visa solidifies your operational foundation while granting you the privilege of residing in the country as a business owner.',
+    title: 'Employment Pass (DP10 / ESD)',
+    description: 'For expatriates in professional and management roles, the Employment Pass (EP) is the primary work authorization. NetaNexus facilitates the entire ESD registration and pass application process for MSC and non-MSC status companies.',
     benefits: [
-      'Up to 3-year residency (renewable)',
-      'Legal right to reside in the UAE as an investor/partner',
-      'Sponsor family members (spouse and children)',
-      'Fast-tracked application process with NetaNexus',
-      'Ability to open personal and corporate bank accounts easily'
+      '2 to 5 years renewable residency',
+      'Eligible for spouse and dependent passes',
+      'Fast-track processing for Tier 1 applicants',
+      'Support for MDEC Digital Economy status companies',
+      'Simplified renewal and transition processes'
+    ],
+    image: 'https://images.unsplash.com/photo-1664575602276-acd073f104c1?q=80&w=2070&auto=format&fit=crop'
+  },
+  {
+    id: 'pvip',
+    icon: <Award className="w-8 h-8" />,
+    title: 'Premium Wealth Pass (PVIP)',
+    description: 'The PVIP is a "Residency through Investment" program for high-net-worth individuals. It offers a unique 20-year term, providing the ultimate stability for global entrepreneurs and their families in Malaysia.',
+    benefits: [
+      '20-year multiple-entry visa duration',
+      'Permission to work and invest in Malaysia',
+      'No minimum stay requirements',
+      'Sponsorship for families and foreign domestic helpers',
+      'Exclusive processing through authorized agencies'
     ],
     image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop'
   },
-  {
-    id: 'retirement-visa',
+    {
+    id: 'de-rantau',
     icon: <HeartHandshake className="w-8 h-8" />,
-    title: 'Retirement Visa',
-    description: 'The UAE offers a 5-year renewable Retirement Visa for retired residents looking to spend their golden years in a safe, tax-free, and luxurious environment.',
+    title: 'DE Rantau (Digital Nomad Pass)',
+    description: 'Positioning Malaysia as a preferred digital nomad hub, the DE Rantau pass is designed for remote workers and freelancers, offering a 12-month stay in stunning locations across Malaysia.',
     benefits: [
-      '5-year residency duration',
-      'Access to world-class healthcare facilities',
-      'Sponsorship for spouse and dependents',
-      'Zero tax on pensions and retirement income',
-      'Enjoy the UAE\'s exceptional standard of living'
+      '12-month renewable stay',
+      'Access to certified nomad-friendly hubs',
+      'Strategic locations like KL, Penang, and Langkawi',
+      'Simplified online application via MDEC',
+      'Permission to bring spouse and children'
     ],
-    image: 'https://images.unsplash.com/photo-1511452815075-bfcaed9ee2e2?q=80&w=2070&auto=format&fit=crop'
+    image: 'https://images.unsplash.com/photo-1616400619175-5beda3a17896?q=80&w=2070&auto=format&fit=crop'
   }
 ];
 
@@ -66,8 +66,8 @@ export default function VisaServicesPage() {
   return (
     <main className="pt-32 relative overflow-hidden">
       {/* Background Glows */}
-      <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-uae-green/10 rounded-full blur-[100px] pointer-events-none" />
-      <div className="absolute top-40 left-1/4 w-[400px] h-[400px] bg-uae-blue/5 rounded-full blur-[80px] pointer-events-none" />
+      <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-glow-1/10 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute top-40 left-1/4 w-[400px] h-[400px] bg-glow-2/5 rounded-full blur-[80px] pointer-events-none" />
 
       <div className="container mx-auto px-6 md:px-12 mb-20 relative z-10">
         <motion.div
@@ -82,15 +82,15 @@ export default function VisaServicesPage() {
             </Link>
             <span className="text-muted">/</span>
             <span className="text-sm font-medium uppercase tracking-widest text-accent">
-              Visa Solutions
+              Residency Solutions
             </span>
           </div>
 
           <h1 className="text-5xl md:text-7xl font-display font-bold tracking-tight leading-tight mb-6 text-gradient">
-            UAE Visa & Residency Solutions
+            Residency Solutions
           </h1>
           <p className="text-lg text-muted font-light leading-relaxed">
-            Navigate the complexities of UAE immigration with confidence. From the prestigious Golden Visa to corporate employment and investor pathways, NetaNexus guarantees a seamless, accelerated process.
+            Secure your future in Malaysia with our specialized residency and global mobility services. From premium wealth passes to professional work authorizations, NetaNexus ensures a seamless, reliable process.
           </p>
         </motion.div>
       </div>
@@ -141,7 +141,7 @@ export default function VisaServicesPage() {
                 
                 <div className="flex-1 w-full relative z-10">
                   <div className="aspect-[4/3] rounded-2xl bg-card-bg border border-border overflow-hidden relative group-hover:border-accent/40 transition-colors duration-500">
-                     <div className="absolute inset-0 bg-gradient-to-br from-uae-green/20 to-transparent mix-blend-overlay z-10" />
+                     <div className="absolute inset-0 bg-gradient-to-br from-glow-1/20 to-transparent mix-blend-overlay z-10" />
                      <img 
                        src={visa.image}
                        alt={visa.title}

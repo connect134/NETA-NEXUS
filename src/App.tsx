@@ -8,9 +8,10 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import AboutPage from './pages/AboutPage';
 import ServicesPage from './pages/ServicesPage';
-import SetupInUAEPage from './pages/SetupInUAEPage';
-import ContactPage from './pages/ContactPage';
+import SetupInMalaysiaPage from './pages/SetupInMalaysiaPage';
+import ReferralProgramPage from './pages/ReferralProgramPage';
 import VisaServicesPage from './pages/VisaServicesPage';
+import ContactPage from './pages/ContactPage';
 
 export default function App() {
   const location = useLocation();
@@ -51,7 +52,8 @@ export default function App() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/visas" element={<VisaServicesPage />} />
-        <Route path="/setup-in-uae" element={<SetupInUAEPage />} />
+        <Route path="/referral" element={<ReferralProgramPage />} />
+        <Route path="/setup-in-malaysia" element={<SetupInMalaysiaPage />} />
         <Route path="/contact" element={<ContactPage />} />
       </Routes>
       <Footer />
