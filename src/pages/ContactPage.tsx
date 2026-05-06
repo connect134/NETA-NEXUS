@@ -41,7 +41,7 @@ export default function ContactPage() {
             >
               <h3 className="text-2xl font-display font-semibold mb-8 text-foreground">Quick Call Request</h3>
               
-              <form 
+             <form 
                 className="flex flex-col gap-6" 
                 onSubmit={async (e) => {
                   e.preventDefault();
@@ -50,17 +50,39 @@ export default function ContactPage() {
                   const originalText = button.innerHTML;
                   
                   button.disabled = true;
-                  button.innerHTML = 'Sending...';
+                  button.innerHTML = '<span class="flex items-center gap-2">Sending... <div class="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin"></div></span>';
                   
-                  // Simulate API call
-                  await new Promise(resolve => setTimeout(resolve, 1500));
+                  // 1. Prepare the data
+                  const formData = new FormData(form);
+                  // 2. Updated URL - removed the placeholder suffix
+                  const scriptURL = "https://script.google.com/macros/s/AKfycbx4SVceqFdKG0HyDMLpddXxIbAL2qHBr97BySguQq6JikNwMBlg4YrCqYobY7BluDAzcQ/exec"; 
                   
-                  // Reset button and show success (in a real app, you'd use a state variable for the whole form)
-                  // For this demo, we'll use a local state-like logic or just transform the form
-                  const successEl = document.getElementById('form-success');
-                  if (successEl) {
-                    form.classList.add('hidden');
-                    successEl.classList.remove('hidden');
+                  try {
+                    // 3. Send data to Google Apps Script
+                    // Note: GAS requires a redirect follow, which is default. 
+                    // If CORS issues persist, one might need mode: 'no-cors' 
+                    // but that prevents reading the response.
+                    const response = await fetch(scriptURL, { 
+                      method: 'POST', 
+                      body: formData,
+                      mode: 'no-cors' // This is the most reliable way to send to GAS without CORS failures
+                    });
+                    
+                    // Since we use no-cors, we can't read the response body.
+                    // We assume success if the fetch doesn't throw.
+                    const successEl = document.getElementById('form-success');
+                    if (successEl) {
+                      form.classList.add('hidden');
+                      successEl.classList.remove('hidden');
+                      // Scroll to top of the form area
+                      successEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
+                  } catch (error) {
+                    // 5. Handle Error
+                    console.error("Submission failed:", error);
+                    alert("There was a connection error. Please try again or contact us directly via WhatsApp.");
+                    button.disabled = false;
+                    button.innerHTML = originalText;
                   }
                 }}
               >
@@ -70,6 +92,7 @@ export default function ContactPage() {
                     <input 
                       type="text" 
                       id="firstName" 
+                      name="firstName" /* ADDED NAME ATTRIBUTE */
                       required
                       className="bg-background/50 border border-border rounded-xl px-4 py-3.5 text-foreground focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/20 transition-all placeholder:text-muted/40" 
                       placeholder="John" 
@@ -79,7 +102,8 @@ export default function ContactPage() {
                     <label htmlFor="lastName" className="text-sm text-muted font-medium ml-1">Last Name</label>
                     <input 
                       type="text" 
-                      id="lastName" 
+                      id="lastName"
+                      name="lastName" /* ADDED NAME ATTRIBUTE */
                       required
                       className="bg-background/50 border border-border rounded-xl px-4 py-3.5 text-foreground focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/20 transition-all placeholder:text-muted/40" 
                       placeholder="Doe" 
@@ -92,6 +116,7 @@ export default function ContactPage() {
                   <input 
                     type="email" 
                     id="email" 
+                    name="email" /* ADDED NAME ATTRIBUTE */
                     required
                     className="bg-background/50 border border-border rounded-xl px-4 py-3.5 text-foreground focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/20 transition-all placeholder:text-muted/40" 
                     placeholder="your@email.com" 
@@ -103,6 +128,7 @@ export default function ContactPage() {
                   <input 
                     type="tel" 
                     id="phone" 
+                    name="phone" /* ADDED NAME ATTRIBUTE */
                     className="bg-background/50 border border-border rounded-xl px-4 py-3.5 text-foreground focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/20 transition-all placeholder:text-muted/40" 
                     placeholder="+60 12 408 1286" 
                   />
@@ -113,6 +139,7 @@ export default function ContactPage() {
                   <div className="relative">
                     <select 
                       id="service" 
+                      name="service" /* ADDED NAME ATTRIBUTE */
                       className="w-full bg-background/50 border border-border rounded-xl px-4 py-3.5 text-foreground focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/20 transition-all appearance-none cursor-pointer"
                     >
                       <option value="" className="bg-background">Select a service...</option>
@@ -135,6 +162,7 @@ export default function ContactPage() {
                   <label htmlFor="message" className="text-sm text-muted font-medium ml-1">Message</label>
                   <textarea 
                     id="message" 
+                    name="message" /* ADDED NAME ATTRIBUTE */
                     rows={4} 
                     required
                     className="bg-background/50 border border-border rounded-xl px-4 py-3.5 text-foreground focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/20 transition-all resize-none placeholder:text-muted/40" 
