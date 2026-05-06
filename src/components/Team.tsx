@@ -4,10 +4,12 @@ import { Linkedin, Mail } from 'lucide-react';
 const teamMembers = [
   {
     id: 'ceo',
-    name: 'Alexander Sterling',
+    name: 'Shalini Nehru',
     role: 'Founder & CEO',
-    description: 'With over 20 years of experience in high growth markets, Alexander established NetaNexus to redefine premium business advisory and corporate structuring in Malaysia.',
-    image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=2000&auto=format&fit=crop',
+    description: 'With over 20 years of experience in high growth markets, Shalini established NetaNexus to redefine premium business advisory and corporate structuring in Malaysia.',
+    image: 'https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?q=80&w=2000&auto=format&fit=crop',
+    linkedin: 'https://www.linkedin.com/in/shalini-nehru/',
+    email: 'shalini@netanexus.com'
   },
   {
     id: 'md',
@@ -15,6 +17,8 @@ const teamMembers = [
     role: 'Managing Director',
     description: 'Elena spearheads our strategic operations, ensuring our global clients receive world class solutions for market entry and operational expansion in the ASEAN region.',
     image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=2000&auto=format&fit=crop',
+    linkedin: '#',
+    email: 'elena@netanexus.com'
   },
   {
     id: 'legal',
@@ -22,6 +26,8 @@ const teamMembers = [
     role: 'Director of Legal Advisory',
     description: 'Tariq is an expert in international commercial law and Malaysian compliance, safeguarding our clients\' corporate interests and securing their legal frameworks.',
     image: 'https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=2000&auto=format&fit=crop',
+    linkedin: '#',
+    email: 'tariq@netanexus.com'
   },
   {
     id: 'banking',
@@ -29,6 +35,8 @@ const teamMembers = [
     role: 'Head of Corporate Banking',
     description: 'Aisha brings deep rooted relationships with Malaysia\'s top financial institutions, providing seamless banking setups and wealth management for global investors.',
     image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=2000&auto=format&fit=crop',
+    linkedin: '#',
+    email: 'aisha@netanexus.com'
   },
   {
     id: 'pro',
@@ -36,6 +44,8 @@ const teamMembers = [
     role: 'Head of Government Relations',
     description: 'Marcus oversees all SSM, MIDA, and MDEC liaising, guaranteeing accelerated processing for business licenses and premium investor passes.',
     image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=2000&auto=format&fit=crop',
+    linkedin: '#',
+    email: 'marcus@netanexus.com'
   },
   {
     id: 'strategy',
@@ -43,6 +53,8 @@ const teamMembers = [
     role: 'Director of Strategy',
     description: 'Sophia architects robust frameworks for global enterprises, ensuring long term profitability and sustainable market capture across the Southeast Asian corridor.',
     image: 'https://images.unsplash.com/photo-1598550874175-4d0ef436c909?q=80&w=2000&auto=format&fit=crop',
+    linkedin: '#',
+    email: 'sophia@netanexus.com'
   }
 ];
 
@@ -97,10 +109,18 @@ export default function Team() {
               <div className="aspect-square mb-6 overflow-hidden rounded-2xl relative">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 flex items-end p-6">
                   <div className="flex gap-3 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                    <a href="#" className="w-10 h-10 rounded-full bg-accent text-black flex items-center justify-center hover:bg-white transition-colors">
+                    <a 
+                      href={member.linkedin} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="w-10 h-10 rounded-full bg-accent text-black flex items-center justify-center hover:bg-white transition-colors"
+                    >
                       <Linkedin className="w-5 h-5" />
                     </a>
-                    <a href="#" className="w-10 h-10 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white flex items-center justify-center hover:bg-white/20 transition-colors">
+                    <a 
+                      href={`mailto:${member.email}`} 
+                      className="w-10 h-10 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white flex items-center justify-center hover:bg-white/20 transition-colors"
+                    >
                       <Mail className="w-5 h-5" />
                     </a>
                   </div>
@@ -108,7 +128,8 @@ export default function Team() {
                 <img 
                   src={member.image} 
                   alt={member.name} 
-                  className="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
+                  referrerPolicy="no-referrer"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700"
                 />
               </div>
 
