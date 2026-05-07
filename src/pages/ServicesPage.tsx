@@ -10,7 +10,7 @@ const detailedServices = [
     title: 'Corporate Structuring & Company Formation',
     description: 'Malaysia stands as a premier global business hub due to its strategic position in ASEAN and pro business environment. With rapidly advancing infrastructure and favorable administrative conditions, establishing your company in Malaysia has never been more efficient. At NetaNexus, we guide you through this streamlined process, offering tailored insights to help you select the ideal jurisdiction and license type, from Sendirian Berhad (Sdn Bhd) to Labuan offshore entities.',
     options: ['Mainland Sdn Bhd', 'Labuan IBFC', 'Free Industrial Zones (FIZ)'],
-    image: 'https://images.unsplash.com/photo-1549488344-c76b9ce6023d?q=80&w=2070&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1535732759880-bbd5c7265e3f?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   },
   {
     id: 'corporate-banking',
