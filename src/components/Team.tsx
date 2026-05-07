@@ -7,7 +7,7 @@ const teamMembers = [
     name: 'Shalini Nehru',
     role: 'Founder & CEO',
     description: 'With over 20 years of experience in high growth markets, Shalini established NetaNexus to redefine premium business advisory and corporate structuring in Malaysia.',
-    image: 'public/images/ceo.jpg',
+    image: '/images/ceo.jpg',
     linkedin: 'https://www.linkedin.com/in/shalini-nehru/',
     email: 'shalini.fren@gmail.com'
   },
@@ -52,7 +52,7 @@ const teamMembers = [
     name: 'Premnath',
     role: 'Business Account Manager',
     description: 'Prem architects robust frameworks for global enterprises, ensuring long term profitability and sustainable market capture across the Southeast Asian corridor.',
-    image: 'public/images/BAM.png',
+    image: '/images/BAM.png',
     linkedin: '#',
     email: '12'
   }
