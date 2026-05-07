@@ -21,33 +21,6 @@ const teamMembers = [
     email: 'elena@netanexus.com'
   },
   {
-    id: 'legal',
-    name: 'Tariq Al Mansouri',
-    role: 'Director of Legal Advisory',
-    description: 'Tariq is an expert in international commercial law and Malaysian compliance, safeguarding our clients\' corporate interests and securing their legal frameworks.',
-    image: 'https://images.unsplash.com/photo-1600878459108-617a253537e9?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    linkedin: '#',
-    email: 'tariq@netanexus.com'
-  },
-  {
-    id: 'banking',
-    name: 'Aisha Rahman',
-    role: 'Head of Corporate Banking',
-    description: 'Aisha brings deep rooted relationships with Malaysia\'s top financial institutions, providing seamless banking setups and wealth management for global investors.',
-    image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=2000&auto=format&fit=crop',
-    linkedin: '#',
-    email: 'aisha@netanexus.com'
-  },
-  {
-    id: 'pro',
-    name: 'Marcus Chen',
-    role: 'Head of Government Relations',
-    description: 'Marcus oversees all SSM, MIDA, and MDEC liaising, guaranteeing accelerated processing for business licenses and premium investor passes.',
-    image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=2000&auto=format&fit=crop',
-    linkedin: '#',
-    email: 'marcus@netanexus.com'
-  },
-  {
     id: 'account',
     name: 'Premnath',
     role: 'Business Account Manager',
