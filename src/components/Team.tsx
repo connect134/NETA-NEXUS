@@ -7,18 +7,18 @@ const teamMembers = [
     name: 'Shalini Nehru',
     role: 'Founder & CEO',
     description: 'With over 20 years of experience in high growth markets, Shalini established NetaNexus to redefine premium business advisory and corporate structuring in Malaysia.',
-    image: '/images/ceo.jpg',
+    image: '/images/ceo2.jpg',
     linkedin: 'https://www.linkedin.com/in/shalini-nehru/',
     email: 'shalini.fren@gmail.com'
   },
   {
     id: 'md',
-    name: 'Elena Rostova',
+    name: 'Darius Navin',
     role: 'Managing Director',
-    description: 'Elena spearheads our strategic operations, ensuring our global clients receive world class solutions for market entry and operational expansion in the ASEAN region.',
-    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=2000&auto=format&fit=crop',
+    description: 'Darius spearheads our strategic operations, ensuring our global clients receive world class solutions for market entry and operational expansion in the ASEAN region.',
+    image: '/images/MD.png',
     linkedin: '#',
-    email: 'elena@netanexus.com'
+    email: 'darius@netanexus.com'
   },
   {
     id: 'account',
