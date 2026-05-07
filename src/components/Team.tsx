@@ -25,7 +25,7 @@ const teamMembers = [
     name: 'Tariq Al Mansouri',
     role: 'Director of Legal Advisory',
     description: 'Tariq is an expert in international commercial law and Malaysian compliance, safeguarding our clients\' corporate interests and securing their legal frameworks.',
-    image: 'https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=2000&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1556157382-97eda2d62296?q=8https://images.unsplash.com/photo-1600878459108-617a253537e9?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D0&w=2000&auto=format&fit=crop',
     linkedin: '#',
     email: 'tariq@netanexus.com'
   },
