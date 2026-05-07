@@ -7,9 +7,9 @@ const teamMembers = [
     name: 'Shalini Nehru',
     role: 'Founder & CEO',
     description: 'With over 20 years of experience in high growth markets, Shalini established NetaNexus to redefine premium business advisory and corporate structuring in Malaysia.',
-    image: 'https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?q=80&w=2000&auto=format&fit=crop',
+    image: 'public/images/ceo.jpg',
     linkedin: 'https://www.linkedin.com/in/shalini-nehru/',
-    email: 'shalini@netanexus.com'
+    email: 'shalini.fren@gmail.com'
   },
   {
     id: 'md',
@@ -48,13 +48,13 @@ const teamMembers = [
     email: 'marcus@netanexus.com'
   },
   {
-    id: 'strategy',
-    name: 'Sophia Laurent',
-    role: 'Director of Strategy',
-    description: 'Sophia architects robust frameworks for global enterprises, ensuring long term profitability and sustainable market capture across the Southeast Asian corridor.',
-    image: 'https://images.unsplash.com/photo-1598550874175-4d0ef436c909?q=80&w=2000&auto=format&fit=crop',
+    id: 'account',
+    name: 'Premnath',
+    role: 'Business Account Manager',
+    description: 'Prem architects robust frameworks for global enterprises, ensuring long term profitability and sustainable market capture across the Southeast Asian corridor.',
+    image: 'public/images/BAM.png',
     linkedin: '#',
-    email: 'sophia@netanexus.com'
+    email: '12'
   }
 ];
 
