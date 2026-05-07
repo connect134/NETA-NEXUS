@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { MessageCircle, Twitter, Linkedin } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -43,8 +44,15 @@ export default function Footer() {
           <div>
             <h4 className="text-foreground font-medium mb-6">Connect</h4>
             <ul className="space-y-4 text-sm text-muted font-light">
-              <li><a href="https://wa.me/60124081286" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors flex items-center gap-2 text-[#25D366]">WhatsApp Us</a></li>
-              <li><a href="https://x.com/NetaNexus" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">X (Twitter)</a></li>
+              <li><a href="https://wa.me/60124081286" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors flex items-center gap-2">
+                <MessageCircle size={16} className="text-[#25D366]" /> WhatsApp Us
+              </a></li>
+              <li><a href="https://x.com/NetaNexus" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors flex items-center gap-2">
+                <Twitter size={16} /> X (Twitter)
+              </a></li>
+              <li><a href="https://linkedin.com/company/netanexus" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors flex items-center gap-2">
+                <Linkedin size={16} /> LinkedIn
+              </a></li>
               <li><a href="/about#leadership" className="hover:text-accent transition-colors">Insights & News</a></li>
             </ul>
           </div>
