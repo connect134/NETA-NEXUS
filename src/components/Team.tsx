@@ -26,8 +26,8 @@ const teamMembers = [
     role: 'Business Account Manager',
     description: 'Prem architects robust frameworks for global enterprises, ensuring long term profitability and sustainable market capture across the Southeast Asian corridor.',
     image: '/images/BAM.png',
-    linkedin: '#',
-    email: 'premnath@netanexus.com'
+    linkedin: 'https://www.linkedin.com/in/premnath-balasubramaniam-428722307/',
+    email: '#'
   }
 ];
 
