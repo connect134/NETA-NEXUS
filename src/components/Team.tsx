@@ -13,12 +13,12 @@ const teamMembers = [
   },
   {
     id: 'md',
-    name: 'Darius Navin',
+    name: 'Periya Mohan',
     role: 'Managing Director',
-    description: 'Darius spearheads our strategic operations, ensuring our global clients receive world class solutions for market entry and operational expansion in the ASEAN region.',
-    image: '/images/MD.png',
+    description: 'Periya spearheads our strategic operations, ensuring our global clients receive world class solutions for market entry and operational expansion in the ASEAN region.',
+    image: 'public/images/MD2.jpg',
     linkedin: '#',
-    email: 'darius@netanexus.com'
+    email: 'periya@netanexus.com'
   },
   {
     id: 'account',
@@ -27,7 +27,7 @@ const teamMembers = [
     description: 'Prem architects robust frameworks for global enterprises, ensuring long term profitability and sustainable market capture across the Southeast Asian corridor.',
     image: '/images/BAM.png',
     linkedin: '#',
-    email: '12'
+    email: 'premnath@netanexus.com'
   }
 ];
 
