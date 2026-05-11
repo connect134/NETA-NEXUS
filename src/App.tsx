@@ -11,7 +11,7 @@ import ServicesPage from './pages/ServicesPage';
 import SetupInMalaysiaPage from './pages/SetupInMalaysiaPage';
 import ReferralProgramPage from './pages/ReferralProgramPage';
 import VisaServicesPage from './pages/VisaServicesPage';
-import CareersPage from '.CareersPage.tsx';
+import CareersPage from './pages/CareersPage';
 import ContactPage from './pages/ContactPage';
 
 export default function App() {
