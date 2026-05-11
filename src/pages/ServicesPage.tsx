@@ -5,6 +5,14 @@ import CTA from '../components/CTA';
 
 const detailedServices = [
   {
+    id: 'hr-relations',
+    icon: <Handshake className="w-8 h-8" />,
+    title: 'HR 360° Solutions',
+    description: 'People. Process. Performance. Alligned for Success.',
+    options: ['HR Strategy & consulting', 'Talent acquisition & recruitment', 'Employee Relations & engagement', 'Policy, Compliance & Governance'],
+    image: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+  },
+  {
     id: 'company-formation',
     icon: <Building2 className="w-8 h-8" />,
     title: 'Corporate Structuring & Company Formation',

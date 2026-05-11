@@ -4,6 +4,17 @@ import { Link } from 'react-router-dom';
 
 const services = [
   {
+    icon: <Handshake className="w-6 h-6" />,
+    title: 'HR 360° Solutions',
+    description: 'Comprehensive HR solutions covering the entire employee lifecycle and organizational needs.',
+    includes: [
+      'HR Strategy & consulting',
+      'Talent acquisition & recruitment',
+      'Employee Relations & engagement',
+      'Policy,Compliance & Governance',
+    ]
+  },
+  {
     icon: <Building2 className="w-6 h-6" />,
     title: 'Corporate Structuring & Company Formation',
     description: 'Launch and structure your business with precision. We handle everything from jurisdiction selection to full legal incorporation.',
