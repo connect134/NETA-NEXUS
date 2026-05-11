@@ -1,5 +1,6 @@
+import React from 'react';
 import { motion } from 'motion/react';
-import { Building2, Landmark, Globe2, ShieldCheck, Lightbulb, FileText, Handshake} from 'lucide-react';
+import { Building2, Landmark, Globe2, ShieldCheck, Lightbulb, FileText, Handshake, Rocket, Scale, ArrowUpRight, CheckCircle2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const services = [
