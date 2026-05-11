@@ -83,6 +83,7 @@ export default function CareersPage() {
 
       if (response.ok) {
         setIsSuccess(true);
+        form.reset(); // Clears the actual file input DOM node
         setFormData({ firstName: '', lastName: '', email: '', phone: '', position: '', message: '', cvName: '' });
       } else {
         throw new Error("Form submission failed");
@@ -238,7 +239,7 @@ export default function CareersPage() {
             </div>
             
             {!isSuccess ? (
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6" encType="multipart/form-data">
                 {/* FormSubmit Configuration */}
                 <input type="hidden" name="_subject" value={`New Career Application: ${formData.firstName} ${formData.lastName}`} />
                 <input type="hidden" name="_template" value="table" />
@@ -345,7 +346,7 @@ export default function CareersPage() {
                     <input
                       type="file"
                       id="cv"
-                      name="cv"
+                      name="attachment"
                       accept=".pdf,.doc,.docx"
                       className="hidden"
                       onChange={(e) => {
