@@ -26,7 +26,7 @@ const detailedServices = [
     title: 'Corporate Banking & Financial Setup',
     description: 'The progressive and strictly regulated banking systems in Malaysia are instrumental in driving economic stability and financial security. The Malaysian banking sector is renowned for its steadfast commitment to top tier service, strict compliance, and cutting edge financial technology. With NetaNexus, you will receive comprehensive advisory in establishing your corporate and personal bank accounts with leading institutions like Maybank, CIMB, and RHB.',
     options: ['Business Bank Account', 'Wealth Management', 'Multi-currency Solutions'],
-    image: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?q=80&w=2070&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1579621970795-87facc2f976d?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   },
   {
     id: 'legal-advisory',
@@ -34,7 +34,7 @@ const detailedServices = [
     title: 'Legal Advisory & Compliance',
     description: 'Operating in Malaysia\'s dynamic economic environment requires businesses to navigate rigorous regulatory landscapes and novel corporate challenges. We specialize in providing premier legal advisory and risk management services tailored to the Nuanced and evolving laws in Malaysia, including SSM compliance, MIDA incentives, and MDEC Digital Economy status.',
     options: ['Corporate Governance', 'MIDA/MDEC Incentives', 'SST & TAX Compliance'],
-    image: 'https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&w=2070&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1589391886645-d51941baf7fb?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   },
   {
     id: 'visa-services',
