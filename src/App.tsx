@@ -54,7 +54,7 @@ export default function App() {
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/visas" element={<VisaServicesPage />} />
         <Route path="/referral" element={<ReferralProgramPage />} />
-         <Route path="/careers" element={<CareersPage />} />
+        <Route path="/careers" element={<CareersPage />} />
         <Route path="/setup-in-malaysia" element={<SetupInMalaysiaPage />} />
         <Route path="/contact" element={<ContactPage />} />
       </Routes>
