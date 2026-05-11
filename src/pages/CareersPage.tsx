@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
-import { Briefcase, MapPin, Clock, ArrowRight, CheckCircle2, Heart, Award, Zap } from 'lucide-react';
+import { Briefcase, MapPin, Clock, ArrowRight, CheckCircle2, Heart, Award, Zap, Upload } from 'lucide-react';
 
 const openPositions = [
   {
@@ -54,11 +54,13 @@ const benefits = [
 
 export default function CareersPage() {
   const [formData, setFormData] = useState({
-    name: '',
+    firstName: '',
+    lastName: '',
     email: '',
     phone: '',
     position: '',
     message: '',
+    cvName: '',
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
@@ -69,19 +71,25 @@ export default function CareersPage() {
 
     const form = e.currentTarget as HTMLFormElement;
     const data = new FormData(form);
-    const scriptURL = "https://script.google.com/macros/s/AKfycbx4SVceqFdKG0HyDMLpddXxIbAL2qHBr97BySguQq6JikNwMBlg4YrCqYobY7BluDAzcQ/exec";
+    
+    // FormSubmit AJAX endpoint
+    const endpoint = "https://formsubmit.co/ajax/connect@netanexus.com";
 
     try {
-      await fetch(scriptURL, { 
+      const response = await fetch(endpoint, { 
         method: 'POST', 
-        body: data,
-        mode: 'no-cors' 
+        body: data
       });
-      setIsSuccess(true);
-      setFormData({ name: '', email: '', phone: '', position: '', message: '' });
+
+      if (response.ok) {
+        setIsSuccess(true);
+        setFormData({ firstName: '', lastName: '', email: '', phone: '', position: '', message: '', cvName: '' });
+      } else {
+        throw new Error("Form submission failed");
+      }
     } catch (error) {
       console.error("Submission failed:", error);
-      alert("There was a connection error. Please try again or contact us directly.");
+      alert("There was an error sending your application. Please try again or contact us directly at connect@netanexus.com");
     } finally {
       setIsSubmitting(false);
     }
@@ -231,33 +239,52 @@ export default function CareersPage() {
             
             {!isSuccess ? (
               <form onSubmit={handleSubmit} className="space-y-6">
+                {/* FormSubmit Configuration */}
+                <input type="hidden" name="_subject" value={`New Career Application: ${formData.firstName} ${formData.lastName}`} />
+                <input type="hidden" name="_template" value="table" />
+                <input type="hidden" name="_captcha" value="false" />
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="flex flex-col gap-2">
-                    <label htmlFor="name" className="text-sm text-muted font-medium ml-1">Full Name</label>
+                    <label htmlFor="firstName" className="text-sm text-muted font-medium ml-1">First Name</label>
                     <input
                       type="text"
-                      id="name"
-                      name="name"
+                      id="firstName"
+                      name="firstName"
                       required
-                      value={formData.name}
-                      onChange={(e) => setFormData({...formData, name: e.target.value})}
+                      value={formData.firstName}
+                      onChange={(e) => setFormData({...formData, firstName: e.target.value})}
                       className="bg-background/50 border border-border rounded-xl px-4 py-3.5 text-foreground focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/20 transition-all placeholder:text-muted/40"
-                      placeholder="John Doe"
+                      placeholder="John"
                     />
                   </div>
                   <div className="flex flex-col gap-2">
-                    <label htmlFor="email" className="text-sm text-muted font-medium ml-1">Email Address</label>
+                    <label htmlFor="lastName" className="text-sm text-muted font-medium ml-1">Last Name</label>
                     <input
-                      type="email"
-                      id="email"
-                      name="email"
+                      type="text"
+                      id="lastName"
+                      name="lastName"
                       required
-                      value={formData.email}
-                      onChange={(e) => setFormData({...formData, email: e.target.value})}
+                      value={formData.lastName}
+                      onChange={(e) => setFormData({...formData, lastName: e.target.value})}
                       className="bg-background/50 border border-border rounded-xl px-4 py-3.5 text-foreground focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/20 transition-all placeholder:text-muted/40"
-                      placeholder="john@example.com"
+                      placeholder="Doe"
                     />
                   </div>
+                </div>
+
+                <div className="flex flex-col gap-2">
+                  <label htmlFor="email" className="text-sm text-muted font-medium ml-1">Email Address</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    value={formData.email}
+                    onChange={(e) => setFormData({...formData, email: e.target.value})}
+                    className="bg-background/50 border border-border rounded-xl px-4 py-3.5 text-foreground focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/20 transition-all placeholder:text-muted/40"
+                    placeholder="john@example.com"
+                  />
                 </div>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -310,6 +337,38 @@ export default function CareersPage() {
                     className="bg-background/50 border border-border rounded-xl px-4 py-3.5 text-foreground focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/20 transition-all resize-none placeholder:text-muted/40"
                     placeholder="Tell us a bit about yourself and why you want to join us..."
                   />
+                </div>
+
+                <div className="flex flex-col gap-2">
+                  <label htmlFor="cv" className="text-sm text-muted font-medium ml-1">Upload CV / Resume (PDF/DOCX)</label>
+                  <div className="relative">
+                    <input
+                      type="file"
+                      id="cv"
+                      name="cv"
+                      accept=".pdf,.doc,.docx"
+                      className="hidden"
+                      onChange={(e) => {
+                        const file = e.target.files?.[0];
+                        if (file) {
+                          setFormData({...formData, cvName: file.name});
+                        }
+                      }}
+                    />
+                    <label 
+                      htmlFor="cv"
+                      className="flex items-center justify-between bg-background/50 border border-border rounded-xl px-4 py-3.5 text-foreground cursor-pointer hover:border-accent hover:ring-1 hover:ring-accent/20 transition-all group/file"
+                    >
+                      <span className={`text-sm truncate mr-4 ${formData.cvName ? "text-foreground" : "text-muted/40 font-light"}`}>
+                        {formData.cvName || "Select your resume file"}
+                      </span>
+                      <div className="flex items-center gap-2 py-1 px-3 bg-accent/10 rounded-lg text-accent text-xs font-semibold uppercase tracking-wider group-hover/file:bg-accent/20 transition-colors">
+                        <Upload size={14} />
+                        Browse
+                      </div>
+                    </label>
+                  </div>
+                  <p className="text-[10px] text-muted/50 ml-1">Max file size: 5MB</p>
                 </div>
                 
                 <button 
