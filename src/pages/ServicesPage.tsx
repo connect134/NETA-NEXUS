@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { ArrowRight, Building2, Landmark, Globe2, ShieldCheck, Lightbulb, Rocket, Scale, FileText } from 'lucide-react';
+import { ArrowRight, Building2, Landmark, Globe2, ShieldCheck, Lightbulb, Rocket, Scale, FileText, Handshake } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import CTA from '../components/CTA';
 
