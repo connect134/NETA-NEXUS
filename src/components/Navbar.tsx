@@ -9,6 +9,7 @@ const navLinks = [
   { name: 'About Us', href: '/about' },
   { name: 'Services', href: '/services' },
   { name: 'Referral', href: '/referral' },
+    { name: 'Careers', href: '/careers' },
   { name: 'Setup in Malaysia', href: '/setup-in-malaysia' },
 ];
 
