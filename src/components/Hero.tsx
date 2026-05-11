@@ -8,7 +8,7 @@ export default function Hero() {
       <div 
         className="absolute inset-0 z-0 opacity-30 mix-blend-luminosity grayscale"
         style={{
-          backgroundImage: 'url("https://images.unsplash.com/photo-1549488344-c76b9ce6023d?q=80&w=2070&auto=format&fit=crop")',
+          backgroundImage: 'url("https://images.unsplash.com/photo-1566914447826-bf04e54bf1be?q=80&w=1631&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
