@@ -205,7 +205,13 @@ export default function CareersPage() {
                   </span>
                 </div>
               </div>
-              <button className="flex items-center gap-2 text-foreground font-medium group-hover:gap-4 transition-all">
+              <button 
+                onClick={() => {
+                  setFormData(prev => ({ ...prev, position: job.title }));
+                  document.getElementById('apply-form')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+                className="flex items-center gap-2 text-foreground font-medium group-hover:gap-4 transition-all"
+              >
                 Apply Now <ArrowRight size={18} className="text-accent" />
               </button>
             </motion.div>
@@ -214,7 +220,7 @@ export default function CareersPage() {
       </section>
 
       {/* Application Form */}
-      <section className="container mx-auto px-6 md:px-12">
+      <section id="apply-form" className="container mx-auto px-6 md:px-12">
         <div className="glass p-8 md:p-16 rounded-[40px] relative overflow-hidden">
           <div className="absolute top-0 right-0 w-64 h-64 bg-accent/5 rounded-full blur-[60px] -mr-32 -mt-32" />
           
