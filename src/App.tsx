@@ -11,7 +11,7 @@ import ServicesPage from './pages/ServicesPage';
 import SetupInMalaysiaPage from './pages/SetupInMalaysiaPage';
 import ReferralProgramPage from './pages/ReferralProgramPage';
 import VisaServicesPage from './pages/VisaServicesPage';
-import CareersPage from './pages/CareersPage';
+import CareersPage from '.CareersPage.tsx';
 import ContactPage from './pages/ContactPage';
 
 export default function App() {
@@ -54,6 +54,7 @@ export default function App() {
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/visas" element={<VisaServicesPage />} />
         <Route path="/referral" element={<ReferralProgramPage />} />
+         <Route path="/careers" element={<CareersPage />} />
         <Route path="/setup-in-malaysia" element={<SetupInMalaysiaPage />} />
         <Route path="/contact" element={<ContactPage />} />
       </Routes>
