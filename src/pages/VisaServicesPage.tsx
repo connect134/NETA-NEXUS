@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { ArrowRight, Globe2, Briefcase, Award, HeartHandshake } from 'lucide-react';
+import { ArrowRight, Globe2, Briefcase, Award, HeartHandshake, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import CTA from '../components/CTA';
 
@@ -59,6 +59,20 @@ const visaTypes = [
       'Permission to bring spouse and children'
     ],
     image: 'https://images.unsplash.com/photo-1616400619175-5beda3a17896?q=80&w=2070&auto=format&fit=crop'
+  },
+  {
+    id: 'dependant-professional-visas',
+    icon: <Users className="w-8 h-8" />,
+    title: 'Professional & Dependant Visas',
+    description: 'Comprehensive mobility solutions for family members and specialized visiting professionals. We handle the entire lifecycle of pass applications, from initial submission to endorsement.',
+    benefits: [
+      'Spouse, children, and parent dependant passes',
+      'Professional Visit Pass (PVP) for short-term consultants',
+      'Social Visit Pass (Long Term) for family members',
+      'Student pass facilitation and renewals',
+      'End-to-end documentation & immigration liaison'
+    ],
+    image: 'https://images.unsplash.com/photo-1581656702382-9ae90e68e7b7?q=80&w=1962&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
   }
 ];
 

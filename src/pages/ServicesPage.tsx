@@ -41,7 +41,7 @@ const detailedServices = [
     icon: <Globe2 className="w-8 h-8" />,
     title: 'Global Mobility & Residency Solutions',
     description: 'Seamless cross border mobility is paramount for global investors and corporate workforce management. Malaysia has pioneered exclusive residency programs like MM2H and Premium Wealth Pass that empower entrepreneurs to build a secure future. NetaNexus provides end to end visa facilitation, aligning precisely with your enterprise\'s workforce expansion and personal residency objectives.',
-    options: ['MM2H Program', 'PVIP (Premium Pass)', 'Employment Pass (DP10/ESD)'],
+    options: ['MM2H Program', 'PVIP (Premium Pass)', 'Employment Pass (DP10/ESD)', 'Professional & Dependant Visas'],
     redirect: '/visas',
     image: 'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=2070&auto=format&fit=crop',
   },
