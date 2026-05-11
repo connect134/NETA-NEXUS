@@ -60,12 +60,31 @@ export default function CareersPage() {
     position: '',
     message: '',
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Application submitted:', formData);
-    alert('Thank you for your application! Our team will get back to you soon.');
-    setFormData({ name: '', email: '', phone: '', position: '', message: '' });
+    setIsSubmitting(true);
+
+    const form = e.currentTarget as HTMLFormElement;
+    const data = new FormData(form);
+    const scriptURL = "https://script.google.com/macros/s/AKfycbx4SVceqFdKG0HyDMLpddXxIbAL2qHBr97BySguQq6JikNwMBlg4YrCqYobY7BluDAzcQ/exec";
+
+    try {
+      await fetch(scriptURL, { 
+        method: 'POST', 
+        body: data,
+        mode: 'no-cors' 
+      });
+      setIsSuccess(true);
+      setFormData({ name: '', email: '', phone: '', position: '', message: '' });
+    } catch (error) {
+      console.error("Submission failed:", error);
+      alert("There was a connection error. Please try again or contact us directly.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -100,7 +119,7 @@ export default function CareersPage() {
       <section className="bg-card-bg/30 py-24 mb-24">
         <div className="container mx-auto px-6 md:px-12">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold mb-4">Why Joins NetaNexus?</h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-4">Why Join NetaNexus?</h2>
             <p className="text-muted font-light max-w-2xl mx-auto">
               We provide the environment, the tools, and the freedom you need to do your best work.
             </p>
@@ -210,75 +229,126 @@ export default function CareersPage() {
               </ul>
             </div>
             
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="space-y-2">
-                  <label className="text-xs font-semibold uppercase tracking-wider opacity-60 ml-1">Full Name</label>
-                  <input
-                    type="text"
-                    required
-                    value={formData.name}
-                    onChange={(e) => setFormData({...formData, name: e.target.value})}
-                    className="w-full bg-background border border-border rounded-xl px-4 py-3 text-sm outline-none focus:border-accent transition-colors"
-                    placeholder="John Doe"
+            {!isSuccess ? (
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="flex flex-col gap-2">
+                    <label htmlFor="name" className="text-sm text-muted font-medium ml-1">Full Name</label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      required
+                      value={formData.name}
+                      onChange={(e) => setFormData({...formData, name: e.target.value})}
+                      className="bg-background/50 border border-border rounded-xl px-4 py-3.5 text-foreground focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/20 transition-all placeholder:text-muted/40"
+                      placeholder="John Doe"
+                    />
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    <label htmlFor="email" className="text-sm text-muted font-medium ml-1">Email Address</label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      required
+                      value={formData.email}
+                      onChange={(e) => setFormData({...formData, email: e.target.value})}
+                      className="bg-background/50 border border-border rounded-xl px-4 py-3.5 text-foreground focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/20 transition-all placeholder:text-muted/40"
+                      placeholder="john@example.com"
+                    />
+                  </div>
+                </div>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="flex flex-col gap-2">
+                    <label htmlFor="phone" className="text-sm text-muted font-medium ml-1">Phone Number</label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={(e) => setFormData({...formData, phone: e.target.value})}
+                      className="bg-background/50 border border-border rounded-xl px-4 py-3.5 text-foreground focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/20 transition-all placeholder:text-muted/40"
+                      placeholder="+60 12 345 6789"
+                    />
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    <label htmlFor="position" className="text-sm text-muted font-medium ml-1">Desired Position</label>
+                    <div className="relative">
+                      <select
+                        id="position"
+                        name="position"
+                        value={formData.position}
+                        onChange={(e) => setFormData({...formData, position: e.target.value})}
+                        className="w-full bg-background/50 border border-border rounded-xl px-4 py-3.5 text-foreground focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/20 transition-all appearance-none cursor-pointer"
+                        required
+                      >
+                        <option value="" className="bg-background">Select a position...</option>
+                        {openPositions.map(job => (
+                          <option key={job.title} value={job.title} className="bg-background">{job.title}</option>
+                        ))}
+                        <option value="General Application" className="bg-background">General Application</option>
+                      </select>
+                      <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-muted">
+                        <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1 1L6 6L11 1" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="flex flex-col gap-2">
+                  <label htmlFor="message" className="text-sm text-muted font-medium ml-1">Why NetaNexus?</label>
+                  <textarea
+                    id="message"
+                    rows={4}
+                    name="message"
+                    value={formData.message}
+                    onChange={(e) => setFormData({...formData, message: e.target.value})}
+                    className="bg-background/50 border border-border rounded-xl px-4 py-3.5 text-foreground focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/20 transition-all resize-none placeholder:text-muted/40"
+                    placeholder="Tell us a bit about yourself and why you want to join us..."
                   />
                 </div>
-                <div className="space-y-2">
-                  <label className="text-xs font-semibold uppercase tracking-wider opacity-60 ml-1">Email Address</label>
-                  <input
-                    type="email"
-                    required
-                    value={formData.email}
-                    onChange={(e) => setFormData({...formData, email: e.target.value})}
-                    className="w-full bg-background border border-border rounded-xl px-4 py-3 text-sm outline-none focus:border-accent transition-colors"
-                    placeholder="john@example.com"
-                  />
+                
+                <button 
+                  type="submit" 
+                  disabled={isSubmitting}
+                  className="btn btn-primary w-full py-4 text-base relative overflow-hidden group/btn"
+                >
+                  <span className={`relative z-10 flex items-center justify-center gap-2 ${isSubmitting ? 'opacity-0' : 'opacity-100'}`}>
+                    Submit Application <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+                  </span>
+                  {isSubmitting && (
+                    <div className="absolute inset-0 flex items-center justify-center">
+                       <div className="w-6 h-6 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
+                    </div>
+                  )}
+                  <div className="absolute inset-0 bg-white/10 translate-y-full group-hover/btn:translate-y-0 transition-transform duration-300" />
+                </button>
+              </form>
+            ) : (
+              <motion.div 
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                className="flex flex-col items-center justify-center text-center p-8 glass rounded-3xl border border-accent/20"
+              >
+                <div className="w-20 h-20 bg-accent/20 rounded-full flex items-center justify-center mb-6 border border-accent/30">
+                  <CheckCircle2 className="w-10 h-10 text-accent" />
                 </div>
-              </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="space-y-2">
-                  <label className="text-xs font-semibold uppercase tracking-wider opacity-60 ml-1">Phone Number</label>
-                  <input
-                    type="tel"
-                    value={formData.phone}
-                    onChange={(e) => setFormData({...formData, phone: e.target.value})}
-                    className="w-full bg-background border border-border rounded-xl px-4 py-3 text-sm outline-none focus:border-accent transition-colors"
-                    placeholder="+60 12 345 6789"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <label className="text-xs font-semibold uppercase tracking-wider opacity-60 ml-1">Desired Position</label>
-                  <select
-                    value={formData.position}
-                    onChange={(e) => setFormData({...formData, position: e.target.value})}
-                    className="w-full bg-background border border-border rounded-xl px-4 py-3 text-sm outline-none focus:border-accent transition-colors appearance-none"
-                    required
-                  >
-                    <option value="">Select a position</option>
-                    {openPositions.map(job => (
-                      <option key={job.title} value={job.title}>{job.title}</option>
-                    ))}
-                    <option value="General Application">General Application</option>
-                  </select>
-                </div>
-              </div>
-              
-              <div className="space-y-2">
-                <label className="text-xs font-semibold uppercase tracking-wider opacity-60 ml-1">Why NetaNexus?</label>
-                <textarea
-                  rows={4}
-                  value={formData.message}
-                  onChange={(e) => setFormData({...formData, message: e.target.value})}
-                  className="w-full bg-background border border-border rounded-xl px-4 py-3 text-sm outline-none focus:border-accent transition-colors resize-none"
-                  placeholder="Tell us a bit about yourself and why you want to join us..."
-                />
-              </div>
-              
-              <button type="submit" className="btn btn-primary w-full py-4 text-base">
-                Submit Application
-              </button>
-            </form>
+                <h3 className="text-2xl font-bold mb-4">Application Sent!</h3>
+                <p className="text-muted leading-relaxed max-w-sm">
+                  Thank you for your interest in joining NetaNexus. Our talent acquisition team will review your profile and get back to you within 3-5 business days.
+                </p>
+                <button 
+                  onClick={() => setIsSuccess(false)}
+                  className="btn btn-secondary mt-8"
+                >
+                  Submit another application
+                </button>
+              </motion.div>
+            )}
           </div>
         </div>
       </section>
