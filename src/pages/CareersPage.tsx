@@ -65,25 +65,29 @@ export default function CareersPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+ const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
     const form = e.currentTarget as HTMLFormElement;
     const data = new FormData(form);
     
-    // FormSubmit AJAX endpoint
-    const endpoint = "https://formsubmit.co/ajax/connect@netanexus.com";
+    // 1. Remove '/ajax/' from the endpoint
+    const endpoint = "https://formsubmit.co/connect@netanexus.com";
 
     try {
       const response = await fetch(endpoint, { 
         method: 'POST', 
+        // 2. Add the Accept header to prevent the page redirect
+        headers: {
+            'Accept': 'application/json'
+        },
         body: data
       });
 
       if (response.ok) {
         setIsSuccess(true);
-        form.reset(); // Clears the actual file input DOM node
+        form.reset(); 
         setFormData({ firstName: '', lastName: '', email: '', phone: '', position: '', message: '', cvName: '' });
       } else {
         throw new Error("Form submission failed");
@@ -95,7 +99,6 @@ export default function CareersPage() {
       setIsSubmitting(false);
     }
   };
-
   return (
     <main className="pt-32 pb-20 relative overflow-hidden">
       {/* Background Glows */}
