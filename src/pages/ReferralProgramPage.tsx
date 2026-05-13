@@ -85,7 +85,12 @@ export default function ReferralProgramPage() {
               Our reward structure is currently being finalized to provide the best possible value to our partners. We focus on transparency, high value incentives, and long term collaboration.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="mailto:referrals@netanexus.com" className="btn btn-primary">
+              <a 
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=connect@netanexus.com" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-primary"
+              >
                 Express Interest <Mail className="w-4 h-4" />
               </a>
               <a href="/contact" className="btn btn-secondary">

@@ -214,7 +214,7 @@ export default function ContactPage() {
             </motion.div>
           </motion.div>
 
-          {/* Contact Info */}
+        {/* Contact Info */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -231,7 +231,9 @@ export default function ContactPage() {
                   <div>
                     <p className="text-sm text-muted mb-1">Email Us</p>
                     <motion.a 
-                      href="mailto:connect@netanexus.com" 
+                      href="https://mail.google.com/mail/?view=cm&fs=1&to=connect@netanexus.com" 
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="text-lg text-foreground hover:text-accent transition-colors relative group inline-block"
                       whileHover={{ x: 4 }}
                     >
@@ -268,14 +270,24 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Map Placeholder */}
-            <div className="flex-grow rounded-3xl overflow-hidden border border-border relative min-h-[300px] bg-card-bg flex items-center justify-center">
-               <div className="absolute inset-0 opacity-30 mix-blend-luminosity" style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1549488344-c76b9ce6023d?q=80&w=2070&auto=format&fit=crop")', backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
-               <div className="absolute inset-0 bg-gradient-to-t from-background via-glow-2/20 to-transparent" />
-               <div className="relative z-10 text-center p-6 glass rounded-2xl border border-border/50">
-                 <MapPin className="w-8 h-8 text-accent mx-auto mb-3" />
-                 <p className="text-foreground font-medium">Kuala Lumpur Headquarters</p>
-               </div>
+            {/* Satellite Map */}
+            <div className="flex-grow rounded-3xl overflow-hidden border border-border relative min-h-[300px] bg-card-bg">
+              <iframe 
+                width="100%" 
+                height="100%" 
+                style={{ border: 0, position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }} 
+                loading="lazy" 
+                allowFullScreen 
+                referrerPolicy="no-referrer-when-downgrade" 
+                src="https://maps.google.com/maps?q=3.1199336,101.6765345&t=k&z=17&ie=UTF8&iwloc=&output=embed"
+                title="Mid Valley City Satellite Map"
+              ></iframe>
+              <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 text-center px-6 py-3 glass rounded-2xl border border-border/50 shadow-lg pointer-events-none">
+                <div className="flex items-center gap-2">
+                  <MapPin className="w-5 h-5 text-accent" />
+                  <p className="text-foreground font-medium text-sm whitespace-nowrap">Kuala Lumpur Headquarters</p>
+                </div>
+              </div>
             </div>
           </motion.div>
         </div>
