@@ -17,7 +17,7 @@ const teamMembers = [
     role: 'Managing Director',
     description: 'Periya spearheads our strategic operations, ensuring our global clients receive world class solutions for market entry and operational expansion in the ASEAN region.',
     image: '/images/MD2.jpg',
-    linkedin: '#',
+    linkedin: 'https://www.linkedin.com/in/periyadarshini-mohan-5a7389248/',
     email: 'periya@netanexus.com'
   },
   {
